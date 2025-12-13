@@ -44,7 +44,7 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
         <div className={styles.blob2} />
 
         {/* Header Section */}
-        <div className={styles.header}>
+        <div className={`${styles.header} ${styles.areaHeader}`}>
           <div className={styles.headerTop}>
             <div className={styles.avatarWrapper}>
               <img src={user.avatar_url} alt={user.login} className={styles.avatar} />
@@ -77,7 +77,7 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
         </div>
 
         {/* Stats Grid */}
-        <div className={styles.grid}>
+        <div className={`${styles.grid} ${styles.areaStats}`}>
           <div className={`${styles.statBox} ${styles.blue}`}>
             <span className={styles.label}>{year} Contributions</span>
             <span className={styles.value}>{yearStats.contributions}</span>
@@ -117,7 +117,7 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
         </div>
 
         {/* Languages & Activity */}
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles.areaLangs}`}>
           <h3 className={styles.sectionTitle}>Top Languages</h3>
           <div className={styles.languages}>
             {yearStats.topLanguages.slice(0, 3).map((lang, idx) => (
@@ -137,8 +137,22 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
           </div>
         </div>
 
+{/* Organizations Section */}
+        {orgs.length > 0 && (
+          <div className={`${styles.section} ${styles.areaOrgs}`}>
+            <h3 className={styles.sectionTitle}>Organizations</h3>
+            <div className={styles.orgsList}>
+              {orgs.map((org: any) => (
+                <a key={org.id} href={`https://github.com/${org.login}`} target="_blank" rel="noopener noreferrer" className={styles.orgLink} title={org.login}>
+                  <img src={org.avatar_url} alt={org.login} className={styles.orgIcon} />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Community Section */}
-        <div className={styles.row}>
+        <div className={`${styles.row} ${styles.areaCommunity}`}>
           <div className={styles.miniCard}>
             <span className={styles.miniLabel}>Followers</span>
             <span className={styles.miniValue}>{user.followers}</span>
@@ -147,15 +161,11 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
             <span className={styles.miniLabel}>Following</span>
             <span className={styles.miniValue}>{user.following}</span>
           </div>
-          <div className={styles.miniCard}>
-            <span className={styles.miniLabel}>Orgs</span>
-            <span className={styles.miniValue}>{orgs.length}</span>
-          </div>
         </div>
 
         {/* Starred Repos Snapshot */}
         {starredRepos.length > 0 && (
-          <div className={styles.section}>
+          <div className={`${styles.section} ${styles.areaStarred}`}>
             <h3 className={styles.sectionTitle}>Recently Starred</h3>
             <div className={styles.repoList}>
               {starredRepos.slice(0, 3).map((repo: any) => (
@@ -169,7 +179,7 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
         )}
 
         {/* Fun Fact Footer */}
-        <div className={styles.footer}>
+        <div className={`${styles.footer} ${styles.areaFooter}`}>
           <div className={styles.funFact}>
             <span className={styles.emoji}>💡</span>
             <p>{yearStats.funFact}</p>

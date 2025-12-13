@@ -1,13 +1,13 @@
 :root {
-  /* Core Colors - Midnight Pro Palette */
-  --bg-deep: #0b1120; /* Deep Navy */
-  --text-main: #ffffff;
-  --text-muted: #94a3b8; /* Slate 400 */
-  --accent-glow: #6366f1; /* Indigo 500 */
-  --accent-secondary: #8b5cf6; /* Violet 500 */
-  --accent-pop: #ec4899; /* Pink 500 */
-  --card-bg: rgba(15, 23, 42, 0.6); /* Slate 900 with opacity */
-  --border-color: rgba(255, 255, 255, 0.1);
+  /* Core Colors - Forest Theme */
+  --bg-deep: #022c22; /* Deep Forest */
+  --text-main: #ecfdf5; /* Mint White */
+  --text-muted: #6ee7b7; /* Emerald 300 */
+  --accent-glow: #10b981; /* Emerald 500 */
+  --accent-secondary: #0d9488; /* Teal 600 */
+  --accent-pop: #4ade80; /* Neon Green */
+  --card-bg: rgba(6, 78, 59, 0.4); /* Emerald 900 with opacity */
+  --border-color: rgba(52, 211, 153, 0.2);
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Animation Speeds */
