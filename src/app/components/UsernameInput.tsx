@@ -20,7 +20,7 @@ export default function UsernameInput() {
       cleanUsername = cleanUsername.split('github.com/')[1].split('/')[0];
     }
 
-    router.push(`/wrap/${cleanUsername}`);
+    router.push(`/wrap?user=${cleanUsername}`);
   };
 
   return (

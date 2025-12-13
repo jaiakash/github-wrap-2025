@@ -27,7 +27,7 @@ export default function WrappedCard({ user, yearStats, starredRepos, orgs, year 
   const years = Array.from({ length: 5 }, (_, i) => currentYear - i); // 2025, 2024, 2023...
 
   const handleYearChange = (newYear: number) => {
-    router.push(`/wrap/${newYear}/${user.login}`);
+    router.push(`/wrap?user=${user.login}&year=${newYear}`);
     setIsMenuOpen(false);
   };
 
