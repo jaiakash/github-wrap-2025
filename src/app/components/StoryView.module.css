@@ -1,0 +1,108 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.progressBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2rem;
+  z-index: 10;
+}
+
+.progressSegment {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressSegment.active {
+  background: white;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.slideBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slideTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.slideValue {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.slideSubtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hint {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
