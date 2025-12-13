@@ -30,7 +30,7 @@ export default function UsernameInput() {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="github.com/username"
+          placeholder="Enter your GitHub username, eg jaiakash"
           className={styles.input}
           aria-label="GitHub Username"
           disabled={loading}

@@ -1,17 +1,14 @@
 :root {
-  /* Core Colors - HSL for easy swatching */
-  --hue-primary: 250; /* Deep Purple/Violet vibe */
-  --hue-secondary: 180; /* Cyan/Teal splash */
-  
-  --bg-deep: hsl(var(--hue-primary), 20%, 8%);
-  --bg-card: hsl(var(--hue-primary), 15%, 12%);
-  --bg-card-hover: hsl(var(--hue-primary), 15%, 16%);
-  
-  --text-main: hsl(var(--hue-primary), 10%, 95%);
-  --text-muted: hsl(var(--hue-primary), 10%, 70%);
-  
-  --accent-glow: hsl(var(--hue-secondary), 80%, 60%);
-  --primary-glow: hsl(var(--hue-primary), 80%, 65%);
+  /* Core Colors - Midnight Pro Palette */
+  --bg-deep: #0b1120; /* Deep Navy */
+  --text-main: #ffffff;
+  --text-muted: #94a3b8; /* Slate 400 */
+  --accent-glow: #6366f1; /* Indigo 500 */
+  --accent-secondary: #8b5cf6; /* Violet 500 */
+  --accent-pop: #ec4899; /* Pink 500 */
+  --card-bg: rgba(15, 23, 42, 0.6); /* Slate 900 with opacity */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Animation Speeds */
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -20,7 +17,7 @@
 body {
   background-color: var(--bg-deep);
   color: var(--text-main);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-main);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
