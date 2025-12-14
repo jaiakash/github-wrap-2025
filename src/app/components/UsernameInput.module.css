@@ -20,7 +20,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  color: var(--text-main);
+  color: var(--text-primary);
   outline: none;
   transition: all 0.3s var(--ease-out-expo);
   backdrop-filter: blur(10px);
@@ -33,15 +33,15 @@
 }
 
 .input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .button {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--bg-deep);
-  background: var(--text-main);
+  color: var(--bg-primary);
+  background: var(--text-primary);
   border: none;
   border-radius: 50px;
   cursor: pointer;

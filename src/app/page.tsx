@@ -19,12 +19,6 @@ export default function Home() {
         <div className={styles.inputWrapper}>
           <UsernameInput />
         </div>
-
-        <div className={styles.blobs}>
-          <div className={styles.blob1} />
-          <div className={styles.blob2} />
-          <div className={styles.blob3} />
-        </div>
       </div>
     </main>
   );

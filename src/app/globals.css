@@ -1,57 +1,76 @@
 :root {
-  /* Core Colors - Forest Theme */
-  --bg-deep: #022c22; /* Deep Forest */
-  --text-main: #ecfdf5; /* Mint White */
-  --text-muted: #6ee7b7; /* Emerald 300 */
-  --accent-glow: #10b981; /* Emerald 500 */
-  --accent-secondary: #0d9488; /* Teal 600 */
-  --accent-pop: #4ade80; /* Neon Green */
-  --card-bg: rgba(6, 78, 59, 0.4); /* Emerald 900 with opacity */
-  --border-color: rgba(52, 211, 153, 0.2);
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Default: Midnight Pro */
+  --bg-primary: #030712;    /* Slate 950/Black */
+  --bg-secondary: #0f172a;  /* Slate 900 */
+  --text-primary: #f8fafc;  /* Slate 50 */
+  --text-secondary: #94a3b8; /* Slate 400 */
+  --accent-primary: #7c3aed; /* Violet 600 */
+  --accent-secondary: #db2777; /* Pink 600 */
+  --accent-glow: rgba(124, 58, 237, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-space), monospace;
 
-  /* Animation Speeds */
-  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme='aurora'] {
+  --bg-primary: #000000;
+  --bg-secondary: #0f172a; /* Deep Blue for contrast cards */
+  --text-primary: #f0fdf4; /* Mint 50 */
+  --text-secondary: #6ee7b7; /* Emerald 300 */
+  --accent-primary: #10b981; /* Emerald 500 */
+  --accent-secondary: #8b5cf6; /* Violet 500 */
+  --accent-glow: rgba(16, 185, 129, 0.5);
+  --border-color: rgba(16, 185, 129, 0.2);
+}
+
+[data-theme='cyber'] {
+  --bg-primary: #050505;
+  --bg-secondary: #111;
+  --text-primary: #00f3ff; /* Cyan Neon */
+  --text-secondary: #008f96;
+  --accent-primary: #ffe600; /* Laser Yellow */
+  --accent-secondary: #ff003c; /* Red glitch */
+  --accent-glow: rgba(0, 243, 255, 0.5);
+  --border-color: #00f3ff;
+  
+  --font-heading: 'Space Grotesk', monospace; /* Tech feel everywhere */
+  --font-body: 'Space Grotesk', sans-serif;
 }
 
 body {
-  background-color: var(--bg-deep);
-  color: var(--text-main);
-  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 * {
   box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 /* Utilities */
 .glass-panel {
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+[data-theme='cyber'] .glass-panel {
+  background: rgba(0, 243, 255, 0.02);
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+  border-radius: 4px; /* Sharp corners for cyber */
 }

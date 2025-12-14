@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: var(--bg-deep);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -151,7 +151,7 @@
 }
 
 .handle {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
@@ -190,12 +190,12 @@
 
 .blue { --glow-color: var(--accent-secondary); } /* Teal */
 .purple { --glow-color: var(--accent-glow); } /* Emerald */
-.green { --glow-color: var(--accent-pop); } /* Neon */
+.green { --glow-color: var(--accent-primary); } /* Neon */
 .orange { --glow-color: #d97706; } /* Earthy Gold */
 
 .label {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -245,7 +245,7 @@
 .sectionTitle {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -301,7 +301,7 @@
 
 .miniLabel {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -335,11 +335,11 @@
 
 .repoName {
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--text-primary);
 }
 
 .repoOwner {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
