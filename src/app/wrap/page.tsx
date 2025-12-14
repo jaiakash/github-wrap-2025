@@ -6,6 +6,7 @@ import { fetchUser, fetchRepos, fetchEvents, fetchOrgs, fetchStarred, fetchYearl
 import WrappedCard from '@/app/components/WrappedCard';
 import { GitHubRepo } from '@/types/github';
 
+
 // Helper function to process data (copied from original server component)
 function generateFunFact(user: any, repos: GitHubRepo[], totalStars: number, languages: Record<string, number>) {
   const topLang = Object.keys(languages)[0];

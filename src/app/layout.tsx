@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import BackgroundManager from "./components/BackgroundManager";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import Footer from "./components/Footer";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
           <BackgroundManager />
           <ThemeSwitcher />
           {children}
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>
